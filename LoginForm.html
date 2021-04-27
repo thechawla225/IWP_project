@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="properties.css">
+        <script type="text/javascript">
+    var ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i 
+    var ck_password =  /^[A-Za-z0-9!@#$%^&*()_]{6,20}$/;
+    
+    function validate(form){
+    var email = form.email.value;
+    var password = form.password.value;
+    var errors = [];
+     
+     if (!ck_email.test(email)) {
+      errors[errors.length] = "You must enter a valid email address.";
+     }
+    
+     if (!ck_password.test(password)) {
+      errors[errors.length] = "You must enter a valid Password ";
+     }
+     
+     if (errors.length > 0) {
+    
+      reportErrors(errors);
+      return false;
+     }
+      return true;
+    }
+    function reportErrors(errors){
+     var msg = "Please Enter Valide Data...\n";
+     for (var i = 0; i<errors.length; i++) {
+     var numError = i + 1;
+      msg += "\n" + numError + ". " + errors[i];
+    }
+     alert(msg);
+    }
+    </script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="logo">
+                    <h1>Real Estate</h1>
+                </div>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                        <li>
+                            <a href="Properties.html">Properties</a>
+                        </li>
+    
+                        <li>
+                            <a href="#">Services</a>
+                        </li>
+    
+                        <li>
+                            <a href="#">Contact Us</a>
+                        </li>
+                        
+                    <li>
+                        <a href="RegisterForm.html" class = "active">Register / Login</a>
+                    </li>
+                    <li class = "menu">Close</li>
+                </ul>
+                <div class="menu">Menu</div>
+            </header>
+        
+        <form autocomplete="off" enctype="multipart/form-data" method="post" action="thanks.html" onsubmit="return validate(this);" name="form">
+        <div class="info" style="padding-left:20px">
+        <h2>Login Form</h2>
+        <ul>
+        <li id="foli2" class="   ">
+        <label class="desc" id="title2" for="Field2">
+        Email </label>
+        <div>
+        <input id="email" name="email" type="text" class="field text medium" value="" maxlength="255" tabindex="2">
+        </div>
+        </li>
+        <li id="foli4" class="   ">
+        <label class="desc" id="title4" for="Field4">
+        Password </label>
+        <div>
+        <input id="password" name="password" type="password" class="field text medium" value="" maxlength="255" tabindex="4">
+        </div>
+        </li>
+        <li id="foli15" class="   "></li>
+        <li class="buttons">
+        <input type="submit" value="Submit" style="background: rgb(0, 96, 161); color: rgb(255, 255, 255); font-size: 14px; border: 1px solid rgb(0, 96, 161); --darkreader-inline-bgimage: initial; --darkreader-inline-bgcolor:#004d81; --darkreader-inline-color:#e8e6e3; --darkreader-inline-border-top:#007bcf; --darkreader-inline-border-right:#007bcf; --darkreader-inline-border-bottom:#007bcf; --darkreader-inline-border-left:#007bcf;" data-darkreader-inline-bgimage="" data-darkreader-inline-bgcolor="" data-darkreader-inline-color="" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+        </li>
+        </ul>
+        </form>
+     
+    </body>
+</html>

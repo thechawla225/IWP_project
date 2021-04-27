@@ -1,0 +1,157 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="properties.css">
+<script type="text/javascript">
+    var ck_name = /^[A-Za-z0-9 ]{3,20}$/;
+    var ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i 
+    var ck_username = /^[A-Za-z0-9_]{1,20}$/;
+    var ck_password =  /^[A-Za-z0-9!@#$%^&*()_]{6,20}$/;
+    var ck_address = /^[A-Za-z0-9/ ]$/;
+    
+    function validate(form){
+    var name = form.name.value;
+    var email = form.email.value;
+    var username = form.username.value;
+    var password = form.password.value;
+    var gender = form.gender.value;
+    var address = form.address.value;
+    var errors = [];
+     
+     if (!ck_name.test(name)) {
+      errors[errors.length] = "You valid Name .";
+     }
+     if (!ck_email.test(email)) {
+      errors[errors.length] = "You must enter a valid email address.";
+     }
+     if (!ck_username.test(username)) {
+      errors[errors.length] = "You valid UserName no special char .";
+     }
+
+     if (!ck_password.test(password)) {
+      errors[errors.length] = "You must enter a valid Password ";
+     }
+     if (!ck_address.test(address)) {
+      errors[errors.length] = "You must enter a valid Address ";
+     }
+     if (gender==0) {
+      errors[errors.length] = "Select Gender";
+     }
+     if (errors.length > 0) {
+    
+      reportErrors(errors);
+      return false;
+     }
+      return true;
+    }
+    function reportErrors(errors){
+     var msg = "Please Enter Valide Data...\n";
+     for (var i = 0; i<errors.length; i++) {
+     var numError = i + 1;
+      msg += "\n" + numError + ". " + errors[i];
+    }
+     alert(msg);
+    }
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>Real Estate</h1>
+            </div>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+                    <li>
+                        <a href="Properties.html">Properties</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Contact Us</a>
+                    </li>
+                    
+                <li>
+                    <a href="RegisterForm.html" class = "active">Register / Login</a>
+                </li>
+                <li class = "menu">Close</li>
+            </ul>
+            <div class="menu">Menu</div>
+        </header>
+    
+    <form autocomplete="off" enctype="multipart/form-data" method="post" action="thanks.html" onsubmit="return validate(this);" name="form">
+        <div class="info" style="padding-left:20px">
+        <h2>Registration Form</h2>
+        <ul>
+        <li id="foli1" class="   ">
+        <label class="desc" id="title1" for="Field1">
+        Full Name </label>
+        <div>
+        <input id="name" name="name" type="text" class="field text medium" value="" maxlength="255" tabindex="1">
+        </div>
+        </li>
+        <li id="foli2" class="   ">
+        <label class="desc" id="title2" for="Field2">
+        Email </label>
+        <div>
+        <input id="email" name="email" type="text" class="field text medium" value="" maxlength="255" tabindex="2">
+        </div>
+        </li>
+        <li id="foli3" class="   ">
+        <label class="desc" id="title3" for="Field3">
+        User-ID </label>
+        <div>
+        <input id="username" name="username" type="text" class="field text medium" value="" maxlength="255" tabindex="3">
+        </div>
+        </li>
+        <li id="foli4" class="   ">
+        <label class="desc" id="title4" for="Field4">
+        Password </label>
+        <div>
+        <input id="password" name="password" type="password" class="field text medium" value="" maxlength="255" tabindex="4">
+        </div>
+        </li>
+        <li id="foli6" class="   ">
+        <label class="desc" id="title6" for="Field6">
+        Gender </label>
+        <div>
+        <select id="gender" name="gender" class="field select medium" tabindex="5">
+        <option value="0">Gender</option><option value="1">Male</option><option value="2">Female</option>
+        </select>
+        </div>
+        </li>
+        <li id="foli7" class="   ">
+        <label class="desc" id="title4" for="Field4">
+        Address </label>
+        <div>
+        <input id="address" name="address" type="text" class="field text medium" value="" maxlength="500" tabindex="4">
+        </div>
+        </li>
+        <li id="foli15" class="   "></li>
+        <li class="buttons">
+        <input type="submit" value="Submit" style="background: rgb(0, 96, 161); color: rgb(255, 255, 255); font-size: 14px; border: 1px solid rgb(0, 96, 161); --darkreader-inline-bgimage: initial; --darkreader-inline-bgcolor:#004d81; --darkreader-inline-color:#e8e6e3; --darkreader-inline-border-top:#007bcf; --darkreader-inline-border-right:#007bcf; --darkreader-inline-border-bottom:#007bcf; --darkreader-inline-border-left:#007bcf;" data-darkreader-inline-bgimage="" data-darkreader-inline-bgcolor="" data-darkreader-inline-color="" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+        </li>
+        </ul>
+        </form>
+
+        <button onclick="goToLogin()">
+            Already have an account? Login !
+        </button>
+
+        <script>
+            function goToLogin()
+            {
+        window.open('LoginForm.html');
+
+            }
+        </script>
+</body>
+</html>
