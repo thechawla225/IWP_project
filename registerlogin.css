@@ -1,15 +1,10 @@
-h3,h4 {
-  text-align: center;
-}
 .div2 {
-  width: 100%;
-  height: 100%;
-  padding: 30px;
-  border: 2px solid black;
-
-}
-
-
+    width: 95%;
+    height: 50%;
+    padding: 30px;
+    border: 1px solid black;
+  }
+  
   img {
   width: 100%;
   height: 100%;
@@ -40,11 +35,11 @@ h3,h4 {
     padding: 15px;
     border-radius: 4px;
   }
-
   
   #myBtn:hover {
     background-color: #555;
   }
+
   header{
     width: 100%;
     min-height: 70px;
@@ -142,16 +137,6 @@ img {vertical-align: middle;}
   background-color: rgba(0,0,0,0.8);
 }
 
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -181,6 +166,7 @@ img {vertical-align: middle;}
   animation-name: fade;
   animation-duration: 1.5s;
 }
+
 
 .site-footer{
 	background-color:#222;

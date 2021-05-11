@@ -14,22 +14,22 @@
                     <a href="index.html">Home</a>
                 </li>
                 <li>
-                    <a href="#">About Us</a>
+                    <a href="AboutUs.html">About Us</a>
                 </li>
                     <li>
-                        <a href="#">Properties</a>
+                        <a href="Properties.php">Properties</a>
                     </li>
 
                     <li>
-                        <a href="#">Services</a>
+                        <a href="Services.php">Services</a>
                     </li>
 
                     <li>
-                        <a href="#">Contact Us</a>
+                        <a href="Contactus.html">Contact Us</a>
                     </li>
                     
                 <li>
-                    <a href="#" class = "active">Register / Login</a>
+                    <a href="RegisterForm.html" class = "active">Register / Login</a>
                 </li>
                 <li class = "menu">Close</li>
             </ul>
@@ -157,5 +157,77 @@
         <br>
         <br>
         <br>
+        
+        <h3>More of our most beautiful properties</h3>
+            <table>
+                <tr>
+                    <th>Holder Name</th>
+                    <th>Address</th>
+                    <th>Price</th>
+                </tr>
+            <?php
+            $conn = mysqli_connect("localhost" , "ankitc", "1234", "realestate");
+            if($conn-> connect_error)
+            {
+                die("Connection Failed : ". $conn->connect_error);
+            }
+            else
+            {
+                $sql = "SELECT holdername, address, price from properties where upper(address) LIKE '% DELHI'";
+                $result = $conn-> query($sql);
+
+                if($result-> num_rows > 0)
+                {
+                    while($row = $result-> fetch_assoc())
+                    {
+                        echo "<tr><td>". $row["holdername"] ."</td><td>". $row['address'] ."</td><td>" .$row['price'] ."</td></tr>";
+                    }
+                }
+                else
+                {
+                    echo "No results";
+                }
+            }
+
+            $conn-> close();
+            ?>
+        </table>
+        <h4>Contact our registered realtors below to get assistance about properties in your city.</h4>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>User Id</th>
+                    <th>Email</th>
+                    <th>City</th>
+                </tr>
+            <?php
+            $conn = mysqli_connect("localhost" , "ankitc", "1234", "realestate");
+            if($conn-> connect_error)
+            {
+                die("Connection Failed : ". $conn->connect_error);
+            }
+            else
+            {
+                $sql = "SELECT name, userid, email, city from registration where city = 'Delhi'";
+                $result = $conn-> query($sql);
+
+                if($result-> num_rows > 0)
+                {
+                    while($row = $result-> fetch_assoc())
+                    {
+                        echo "<tr><td>". $row["name"] ."</td><td>". $row['userid'] ."</td><td>" .$row['email'] ."</td><td>" .$row['city'] ."</td></tr>";
+                    }
+                }
+                else
+                {
+                    echo "No results";
+                }
+            }
+
+            $conn-> close();
+            ?>
+        </table>
+
+
     </body>
 </html>

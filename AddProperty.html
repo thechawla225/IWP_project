@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="registerlogin.css">
+<script type="text/javascript">
+    var ck_name = /^[A-Za-z0-9 ]{3,20}$/;
+    var ck_address =  /^[A-Za-z ]{10,100}$/;
+    var ck_price =  /^[A-Za-z0-9 ]{3,20}$/;
+    
+    
+    function validate(form){
+    var name = form.holdername.value;
+    var address = form.address.value;
+    var price = form.price.value;
+    var errors = [];
+     
+     if (!ck_name.test(name)) {
+      errors[errors.length] = "You must enter a valid Name.";
+     }
+     if (!ck_address.test(address)) {
+      errors[errors.length] = "You must enter a valid address.";
+     }
+     if (!ck_price.test(price)) {
+      errors[errors.length] = "You must enter a valid price.";
+     }
+     if (errors.length > 0) {
+    
+      reportErrors(errors);
+      return false;
+     }
+      return true;
+    }
+    function reportErrors(errors){
+     var msg = "Please Enter Valide Data...\n";
+     for (var i = 0; i<errors.length; i++) {
+     var numError = i + 1;
+      msg += "\n" + numError + ". " + errors[i];
+    }
+     alert(msg);
+    }
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>Real Estate</h1>
+            </div>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="AboutUs.html">About Us</a>
+                </li>
+                    <li>
+                        <a href="Properties.php">Properties</a>
+                    </li>
+
+                    <li>
+                        <a href="Services.php">Services</a>
+                    </li>
+
+                    <li>
+                        <a href="Contactus.html">Contact Us</a>
+                    </li>
+                    
+                <li>
+                    <a href="RegisterForm.html" class = "active">Register / Login</a>
+                </li>
+                <li class = "menu">Close</li>
+            </ul>
+            <div class="menu">Menu</div>
+        </header>
+    
+    <form autocomplete="off" enctype="multipart/form-data" method="post" action="http://localhost/addproperty.php" onsubmit="return validate(this);" name="form">
+        <div class="info" style="padding-left:20px">
+        <h2>List your property and wait for us to connect you to your buyers!</h2>
+        <ul>
+        <li id="foli1" class="   ">
+        <label class="desc" id="title1" for="Field1">
+        Holder Name </label>
+        <div>
+        <input id="holdername" name="holdername" type="text" class="field text medium" value="" maxlength="255" tabindex="1">
+        </div>
+        </li>
+        <li id="foli7" class="   ">
+        <label class="desc" id="title4" for="Field4">
+        Address </label>
+        <div>
+        <input id="address" name="address" type="text" class="field text medium" value="" maxlength="500" tabindex="4">
+        </div>
+        </li>
+        <li id="foli7" class="   ">
+            <label class="desc" id="title4" for="Field4">
+            Price </label>
+            <div>
+            <input id="price" name="price" type="text" class="field text medium" value="" maxlength="500" tabindex="4">
+            </div>
+            </li>
+            <li class="buttons">
+            <input type="submit" value="Submit" style="background: rgb(0, 96, 161); color: rgb(255, 255, 255); font-size: 14px; border: 1px solid rgb(0, 96, 161); --darkreader-inline-bgimage: initial; --darkreader-inline-bgcolor:#004d81; --darkreader-inline-color:#e8e6e3; --darkreader-inline-border-top:#007bcf; --darkreader-inline-border-right:#007bcf; --darkreader-inline-border-bottom:#007bcf; --darkreader-inline-border-left:#007bcf;" data-darkreader-inline-bgimage="" data-darkreader-inline-bgcolor="" data-darkreader-inline-color="" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+            </li>
+        </ul>
+        </form>
+
+        <footer class="site-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-5">
+                <h4>Contact Address </h4>
+                  <address>
+                    Vellore Institute of Technology<br>
+                    Vellore,<br>
+                    Tamil Nadu.
+                  </address>
+                </div>
+            </div>
+            <div class="bottom-footer">
+              <div class="col-md-5">&copy;Copyright Real Estate.</div>
+              <div class="col-md-7">
+                <ul class="footer-nav">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="Contactus.html">Contact us</a></li>
+                </ul>
+              </div>
+              </div>
+            </div>
+           </footer>
+           
+       
+</body>
+</html>

@@ -14,14 +14,14 @@
                     <a href="index.html">Home</a>
                 </li>
                 <li>
-                    <a href="#">About Us</a>
+                    <a href="AboutUs.html">About Us</a>
                 </li>
                     <li>
-                        <a href="#">Properties</a>
+                        <a href="Properties.php">Properties</a>
                     </li>
 
                     <li>
-                        <a href="#">Services</a>
+                        <a href="Services.php">Services</a>
                     </li>
 
                     <li>
@@ -29,7 +29,7 @@
                     </li>
                     
                 <li>
-                    <a href="#" class = "active">Register / Login</a>
+                    <a href="RegisterForm.html" class = "active">Register / Login</a>
                 </li>
                 <li class = "menu">Close</li>
             </ul>
@@ -38,67 +38,7 @@
         
         <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-        <div class="slideshow-container">
-
-          <div class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
-            <img src="house4.jpg" style="width:100%">
-            <div class="text">The Most Beautiful Properties</div>
-          </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">2 / 3</div>
-            <img src="house2.jpg" style="width:100%">
-            <div class="text">Provided to you by the best Property dealers</div>
-          </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
-            <img src="house3.jfif" style="width:100%">
-            <div class="text">Your Dream Homes</div>
-          </div>
-          
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-          
-          </div>
-          <br>
-          
-          <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span> 
-            <span class="dot" onclick="currentSlide(2)"></span> 
-            <span class="dot" onclick="currentSlide(3)"></span> 
-          </div>
-          
-
         <script>
-          var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-
             var mybutton = document.getElementById("myBtn");
             
             window.onscroll = function() {scrollFunction()};
@@ -121,7 +61,7 @@ function showSlides(n) {
         }
             </script>
         <div class="div2">
-            <img src="house4.jpg" alt="">
+            <img src="Chennai1.jpg" alt="">
             <br>
             <br>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
@@ -142,14 +82,14 @@ function showSlides(n) {
              <tbody>
                <tr>
                  <td>Ankit Chawla</td>
-                 <td>Amazing Heights, Laplat Nagar, Lucknow</td>
+                 <td>Amazing Heights, Laplat Nagar, Chennai</td>
                  <td>33.5 Lakhs</td>
                </tr>
             </tbody>
           </table>
           
         <div class="div2">
-            <img src="house4.jpg" alt="">
+            <img src="Chennai2.jpg" alt="">
             <br>
             <br>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
@@ -169,15 +109,15 @@ function showSlides(n) {
              </thead>
              <tbody>
                <tr>
-                 <td>Ankit Chawla</td>
-                 <td>Amazing Heights, Laplat Nagar, Lucknow</td>
-                 <td>33.5 Lakhs</td>
+                 <td>Subham Kumar</td>
+                 <td>Subham Enclave, Gumti Nagar, Chennai</td>
+                 <td>50.0 Lakhs</td>
                </tr>
             </tbody>
           </table>
         
         <div class="div2">
-            <img src="house4.jpg" alt="">
+            <img src="Chennai3.jpg" alt="">
             <br>
             <br>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
@@ -199,40 +139,96 @@ function showSlides(n) {
              </thead>
              <tbody>
                <tr>
-                 <td>Ankit Chawla</td>
-                 <td>Amazing Heights, Laplat Nagar, Lucknow</td>
-                 <td>33.5 Lakhs</td>
+                 <td>Gulmohar Corporation</td>
+                 <td>Gulmohar Vihaar, Shahstri Nagar, Chennai</td>
+                 <td>3 Crores</td>
                </tr>
             </tbody>
           </table>
         <div class="div2">
-            <img src="house4.jpg" alt="">
+            <img src="Chennai4.jpg" alt="">
             <br>
             <br>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
         </div>
+
         <br>
         <br>
         <br>
         <br>
         <br>
         <br>
-        <table>
-            <thead>
-              <tr>
-                <th>Holder Name</th>
-                <th>Address</th>
-                <th>Price
-                </th>
-              </tr>
-             </thead>
-             <tbody>
-               <tr>
-                 <td>Ankit Chawla</td>
-                 <td>Amazing Heights, Laplat Nagar, Lucknow</td>
-                 <td>33.5 Lakhs</td>
-               </tr>
-            </tbody>
-          </table>
+        
+        <h3>More of our most beautiful properties</h3>
+            <table>
+                <tr>
+                    <th>Holder Name</th>
+                    <th>Address</th>
+                    <th>Price</th>
+                </tr>
+            <?php
+            $conn = mysqli_connect("localhost" , "ankitc", "1234", "realestate");
+            if($conn-> connect_error)
+            {
+                die("Connection Failed : ". $conn->connect_error);
+            }
+            else
+            {
+                $sql = "SELECT holdername, address, price from properties where upper(address) LIKE '% CHENNAI'";
+                $result = $conn-> query($sql);
+
+                if($result-> num_rows > 0)
+                {
+                    while($row = $result-> fetch_assoc())
+                    {
+                        echo "<tr><td>". $row["holdername"] ."</td><td>". $row['address'] ."</td><td>" .$row['price'] ."</td></tr>";
+                    }
+                }
+                else
+                {
+                    echo "No results";
+                }
+            }
+
+            $conn-> close();
+            ?>
+        </table>
+        <h4>Contact our registered realtors below to get assistance about properties in your city.</h4>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>User Id</th>
+                    <th>Email</th>
+                    <th>City</th>
+                </tr>
+            <?php
+            $conn = mysqli_connect("localhost" , "ankitc", "1234", "realestate");
+            if($conn-> connect_error)
+            {
+                die("Connection Failed : ". $conn->connect_error);
+            }
+            else
+            {
+                $sql = "SELECT name, userid, email, city from registration where city = 'Chennai'";
+                $result = $conn-> query($sql);
+
+                if($result-> num_rows > 0)
+                {
+                    while($row = $result-> fetch_assoc())
+                    {
+                        echo "<tr><td>". $row["name"] ."</td><td>". $row['userid'] ."</td><td>" .$row['email'] ."</td><td>" .$row['city'] ."</td></tr>";
+                    }
+                }
+                else
+                {
+                    echo "No results";
+                }
+            }
+
+            $conn-> close();
+            ?>
+        </table>
+
+
     </body>
 </html>
