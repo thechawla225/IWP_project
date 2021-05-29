@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <html>
     <head>
         <link rel="stylesheet" href="properties.css">
@@ -5,33 +7,61 @@
             
     </head>
     <body>
-        <header>
+    <header>
             <div class="logo">
                 <h1>Real Estate</h1>
             </div>
             <ul>
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="index.php">Home</a>
                 </li>
                 <li>
-                    <a href="AboutUs.html">About Us</a>
+                    <a href="AboutUs.php">About Us</a>
                 </li>
-                    <li>
-                        <a href="Properties.php">Properties</a>
-                    </li>
+                <li>
+                    <?php
+                    if($_SESSION["userid"] == 'nahi')
+                    {
+                        echo '<a href="LoginForm.php">Properties</a>';
+                    }
+                    else
+                    {
+                        echo '<a href="Properties.php">Properties</a>';
+                        }
+                    ?>
+                </li>
 
-                    <li>
-                        <a href="Services.php">Services</a>
-                    </li>
-
-                    <li>
-                        <a href="Contactus.html">Contact Us</a>
-                    </li>
+                <li>
+                    <?php
                     
-                <li>
-                    <a href="RegisterForm.html" class = "active">Register / Login</a>
+                    if($_SESSION["userid"] == 'nahi')
+                    {
+                        echo '<a href="LoginForm.php">Services</a>';
+                    }
+                    else
+                    {
+                        echo '<a href="Services.php">Services</a>';
+                        }
+                    ?>
                 </li>
-                <li class = "menu">Close</li>
+
+                <li>
+                    <a href="Contactus.php">Contact Us</a>
+                </li>
+
+                <li>
+                <?php
+                    if($_SESSION['userid'] == 'nahi')
+                    {   echo '<a href="RegisterForm.php" class = "active">Register / Login</a>';
+                        
+                    }
+                    else
+                    {
+                        echo "<a href='LogOut.php'>". $_SESSION['userid'] . "</a>" ;
+                    }
+                    ?>
+                </li>
+                <li class="menu">Close</li>
             </ul>
             <div class="menu">Menu</div>
         </header>

@@ -1,9 +1,8 @@
 <?php session_start();?>
-
 <html>
 
 <head>
-    <link rel="stylesheet" href="registerlogin.css">
+    <link rel="stylesheet" href="properties.css">
 </head>
 
 <body>
@@ -33,6 +32,7 @@
                 </li>
 
                 <li>
+
                     <?php
                     
                     if($_SESSION["userid"] == 'nahi')
@@ -66,47 +66,31 @@
             </ul>
             <div class="menu">Menu</div>
         </header>
-        <h4>Contact our registered realtors below to get assistance about properties in your city.</h4>
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>User Id</th>
-                <th>Email</th>
-                <th>City</th>
-            </tr>
-            <?php
-            $conn = mysqli_connect("localhost" , "ankitc", "1234", "realestate");
-            if($conn-> connect_error)
-            {
-                die("Connection Failed : ". $conn->connect_error);
-            }
-            else
-            {
-                $sql = "SELECT name, userid, email, city from registration";
-                $result = $conn-> query($sql);
 
-                if($result-> num_rows > 0)
-                {
-                    while($row = $result-> fetch_assoc())
-                    {
-                        echo "<tr><td>". $row["name"] ."</td><td>". $row['userid'] ."</td><td>" .$row['email'] ."</td><td>" .$row['city'] ."</td></tr>";
-                    }
-                }
-                else
-                {
-                    echo "No results";
-                }
-            }
+        <h3>REAL ESTATE</h3>
+        <h2>We are a company on a mission, to connect property seekers to property sellers accross India and give them
+            the quality service that they deserve. We promise to provide best quality of service and strive towards
+            customer satisfaction.</h2>
+        <br>
+        <h3>Our Corporate Values</h3>
+        <ul>
+            <li>
+                <h2>Accountability</h2>
+            </li>
+            <li>
 
-            $conn-> close();
-            ?>
-        </table>
+                <h2>Availability</h2>
+            </li>
+            <li>
 
+                <h2>Quality of Service</h2>
+            </li>
+        </ul>
         <footer class="site-footer">
             <div class="container">
                 <div class="row">
                     <div class="col-md-5">
-                        <h4>Contact Address </h4>
+                        <h4 style="text-align: left;">Contact Address </h4>
                         <address>
                             Vellore Institute of Technology<br>
                             Vellore,<br>
@@ -119,12 +103,13 @@
                     <div class="col-md-7">
                         <ul class="footer-nav">
                             <li><a href="index.php">Home</a></li>
-                            <li><a href="">Contact us</a></li>
+                            <li><a href="Contactus.php">Contact us</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </footer>
+
 
 </body>
 

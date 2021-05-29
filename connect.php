@@ -25,7 +25,7 @@ else
     $execval = $stmt->execute();
     $stmt->close();
     $conn->close();
-    header("Location: http://localhost/IWPP/RegisterForm.html");
+    header("Location: http://localhost/IWPP/RegisterForm.php");
 }
 
 

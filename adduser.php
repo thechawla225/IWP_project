@@ -20,7 +20,7 @@ else
     $execval = $stmt->execute();
     $stmt->close();
     $conn->close();
-    header("Location: http://localhost/IWPP/UserRegister.html");
+    header("Location: http://localhost/IWPP/UserRegister.php");
 }
 
 
